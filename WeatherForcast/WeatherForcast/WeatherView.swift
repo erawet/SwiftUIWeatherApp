@@ -47,7 +47,7 @@ struct WeatherView: View {
                     
                     Spacer()
                         .frame(height:  80)
-                    
+                    /*
                     AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
                         image
                             .resizable()
@@ -55,6 +55,16 @@ struct WeatherView: View {
                             .frame(width: 350)
                     } placeholder: {
                         ProgressView()
+                    }
+                    */
+                    HStack{
+                        WeatherDayView(dayOfView: "Mon", imageName: "cloud.sun.fill", temprature: 66)
+                        WeatherDayView(dayOfView: "Tue", imageName: "cloud.sun.fill", temprature: 70)
+                        WeatherDayView(dayOfView: "Wed", imageName: "cloud.sun.fill", temprature: 75)
+                        WeatherDayView(dayOfView: "Thu", imageName: "cloud.sun.fill", temprature: 55)
+                        WeatherDayView(dayOfView: "Fri", imageName: "cloud.sun.fill", temprature: 55)
+                        WeatherDayView(dayOfView: "Sat", imageName: "cloud.sun.fill", temprature: 60)
+                        WeatherDayView(dayOfView: "Sun", imageName: "cloud.sun.fill", temprature: 62)
                     }
                     
                     Spacer()
@@ -100,5 +110,26 @@ struct WeatherView: View {
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherView(weather: previewWeather)
+    }
+}
+
+struct WeatherDayView: View {
+    var dayOfView: String
+    var imageName: String
+    var temprature: Int
+    
+    var body: some View {
+        VStack{
+            Text(dayOfView)
+                .font(.system(size: 20, weight: .medium))
+            Image(systemName: imageName)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio( contentMode: .fit)
+                .frame(width: 40, height: 40)
+            Text("\(temprature)")
+                .font(.system(size: 18, weight: .medium))
+                .foregroundColor(.white)
+        }
     }
 }
