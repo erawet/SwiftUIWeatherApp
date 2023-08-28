@@ -59,12 +59,12 @@ struct WeatherView: View {
                     */
                     HStack{
                         WeatherDayView(dayOfView: "Mon", imageName: "cloud.sun.fill", temprature: 66)
-                        WeatherDayView(dayOfView: "Tue", imageName: "cloud.sun.fill", temprature: 70)
-                        WeatherDayView(dayOfView: "Wed", imageName: "cloud.sun.fill", temprature: 75)
-                        WeatherDayView(dayOfView: "Thu", imageName: "cloud.sun.fill", temprature: 55)
-                        WeatherDayView(dayOfView: "Fri", imageName: "cloud.sun.fill", temprature: 55)
-                        WeatherDayView(dayOfView: "Sat", imageName: "cloud.sun.fill", temprature: 60)
-                        WeatherDayView(dayOfView: "Sun", imageName: "cloud.sun.fill", temprature: 62)
+                        WeatherDayView(dayOfView: "Tue", imageName: "sun.max.fill", temprature: 70)
+                        WeatherDayView(dayOfView: "Wed", imageName: "sun.max.fill", temprature: 75)
+                        WeatherDayView(dayOfView: "Thu", imageName: "cloud.fill", temprature: 55)
+                        WeatherDayView(dayOfView: "Fri", imageName: "cloud.drizzle.fill", temprature: 55)
+                        WeatherDayView(dayOfView: "Sat", imageName: "cloud.sun.rain.fill", temprature: 60)
+                        WeatherDayView(dayOfView: "Sun", imageName: "cloud.bolt.rain.fill", temprature: 62)
                     }
                     
                     Spacer()
