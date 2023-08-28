@@ -47,18 +47,9 @@ struct WeatherView: View {
                     
                     Spacer()
                         .frame(height:  80)
-                    /*
-                    AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 350)
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    */
+
                     HStack{
-                        WeatherDayView(dayOfView: "Mon", imageName: "cloud.sun.fill", temprature: 66)
+                        WeatherDayView(dayOfView: "Mon", imageName: "cloud.fill", temprature: 66)
                         WeatherDayView(dayOfView: "Tue", imageName: "sun.max.fill", temprature: 70)
                         WeatherDayView(dayOfView: "Wed", imageName: "sun.max.fill", temprature: 75)
                         WeatherDayView(dayOfView: "Thu", imageName: "cloud.fill", temprature: 55)
