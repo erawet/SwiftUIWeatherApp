@@ -14,7 +14,7 @@ class WeatherManager {
  
         //5 day forcast and need to fix the model to work
         //https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=4ae1505d22f0c83fcd013b5e7451f9e7
-         
+    //TODO: Hook the correct API to return forcast byt fix the model according to that
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=4ae1505d22f0c83fcd013b5e7451f9e7&units=metric") else { fatalError("Missing URL") }
          // api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=4ae1505d22f0c83fcd013b5e7451f9e7
 

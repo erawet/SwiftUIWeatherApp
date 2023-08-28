@@ -40,22 +40,22 @@ struct WeatherView: View {
                         Spacer()
                         
                         Text(weather.main.feelsLike.roundDouble() + "°")
-                            .font(.system(size: 100))
+                            .font(.system(size: 75))
                             .fontWeight(.bold)
                             .padding()
                     }
                     
                     Spacer()
                         .frame(height:  80)
-
+           //TODO:       Need to hook the API to return forcast correctely
                     HStack{
-                        WeatherDayView(dayOfView: "Mon", imageName: "cloud.fill", temprature: 66)
-                        WeatherDayView(dayOfView: "Tue", imageName: "sun.max.fill", temprature: 70)
-                        WeatherDayView(dayOfView: "Wed", imageName: "sun.max.fill", temprature: 75)
-                        WeatherDayView(dayOfView: "Thu", imageName: "cloud.fill", temprature: 55)
-                        WeatherDayView(dayOfView: "Fri", imageName: "cloud.drizzle.fill", temprature: 55)
-                        WeatherDayView(dayOfView: "Sat", imageName: "cloud.sun.rain.fill", temprature: 60)
-                        WeatherDayView(dayOfView: "Sun", imageName: "cloud.bolt.rain.fill", temprature: 62)
+                        WeatherDayView(dayOfView: "Mon", imageName: "cloud.fill", temprature: 30)
+                        WeatherDayView(dayOfView: "Tue", imageName: "sun.max.fill", temprature: 39)
+                        WeatherDayView(dayOfView: "Wed", imageName: "sun.max.fill", temprature: 37)
+                        WeatherDayView(dayOfView: "Thu", imageName: "cloud.fill", temprature: 34)
+                        WeatherDayView(dayOfView: "Fri", imageName: "cloud.drizzle.fill", temprature: 31)
+                        WeatherDayView(dayOfView: "Sat", imageName: "cloud.sun.rain.fill", temprature: 29)
+                        WeatherDayView(dayOfView: "Sun", imageName: "cloud.bolt.rain.fill", temprature: 32)
                     }
                     
                     Spacer()
